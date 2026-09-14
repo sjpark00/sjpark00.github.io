@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="39개 제품의 반복 품질검사를 위한 QA Harness 구축 사례">
-  <title>39개 제품의 반복 품질검사를 위한 QA Harness 구축 | 박수정 QA Portfolio</title>
+  <meta name="description" content="다수 제품의 반복 품질검사를 하나의 Workflow로 연결하고 단계별 검증을 적용한 QA Harness 구축 사례">
+  <title>다수 제품의 반복 품질검사를 위한 QA Harness 구축 | 박수정 QA Portfolio</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -17,23 +17,84 @@
     <a class="back-link" href="../index.html#dream-security">← Experience로 돌아가기</a>
     <header class="detail-header">
       <p class="eyebrow">Case Study</p>
-      <h1>QA Harness 구축</h1>
+      <h1>다수 제품의 반복 품질검사를 위한 QA Harness 구축</h1>
       <div class="detail-meta"><span>DREAM SECURITY</span><span>QA Senior, 선임연구원</span><span>2024.10 - Present</span></div>
-      <p>품질검사 Workflow를 연결하고 자동화 결과의 Validation Gate를 구성한 사례입니다.</p>
+      <p>반복되는 품질검사 업무 전체를 분석해 처리 방식과 판단 책임을 나누고, 요청건의 입력과 산출물을 연결하는 QA Workflow를 설계했습니다.</p>
     </header>
-    <dl class="detail-highlights">
-      <div><dt>적용 범위</dt><dd>39개 제품</dd></div>
-      <div><dt>구축</dt><dd>QA Harness</dd></div>
-      <div><dt>검증 장치</dt><dd>Validation Gate</dd></div>
-    </dl>
-    <ol class="detail-flow" aria-label="품질검사 Workflow"><li>문서 검토</li><li>Test Case 생성</li><li>테스트 실행</li><li>결과 작성</li></ol>
+
     <div class="detail-content">
-    <section class="detail-block" aria-labelledby="block-1"><h2 id="block-1">Background</h2><p>39개 제품의 반복 품질검사를 수행하며 문서 검토, Test Case 생성, 테스트 실행, 결과 작성 단계가 이어졌습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-2"><h2 id="block-2">Problem</h2><p>반복되는 품질검사 Workflow를 자동화하면서, 잘못 생성된 결과물이 다음 단계로 넘어가지 않도록 검증할 필요가 있었습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-3"><h2 id="block-3">Analysis</h2><p>규칙 기반 처리와 제품 Context에 기반한 QA 판단 영역을 분리했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-4"><h2 id="block-4">QA Strategy</h2><p>39개 제품의 품질검사 Workflow를 연결하는 QA Harness를 설계하고, 자동화 결과를 다시 검증하는 Validation Gate를 구성했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-5"><h2 id="block-5">Action</h2><p>문서 검토 → Test Case 생성 → 테스트 실행 → 결과 작성을 하나의 Workflow로 연결하고, QA Harness를 직접 설계 및 구축했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-6"><h2 id="block-6">Result</h2><p>실제 요청에서 잘못 생성된 결과물 2건을 다음 단계 전에 차단했습니다. 반복 업무를 자동화해 제품 이해, 변경 영향도 분석, 주요 Risk 검증에 집중할 수 있는 구조로 개선했습니다.</p></section>
+      <section class="detail-block" aria-labelledby="problem-title">
+        <h2 id="problem-title">Problem</h2>
+        <div>
+          <p>품질검사 요청마다 제출 문서 검토, 원본 결과 표시, Test Case 작성, 제품 테스트, 결과 작성 및 등록이 반복됐습니다. 제품은 달라도 절차에는 공통 작업이 많았고, 전체 품질검사에는 최소 5~7일이 소요됐습니다.</p>
+          <p>한 단계의 작업을 줄이는 것과 함께, 요청건의 입력과 산출물이 다음 단계로 이어지는 전체 흐름을 개선할 필요가 있었습니다.</p>
+        </div>
+      </section>
+
+      <section class="detail-block" aria-labelledby="analysis-title">
+        <h2 id="analysis-title">Analysis</h2>
+        <div>
+          <p>제품마다 확인할 내용은 다르지만, 품질검사가 진행되는 순서와 산출물을 확인하는 과정은 반복됩니다. 이 공통 흐름을 기준으로 업무를 분해해 자동화 가능한 검증과 제품 Context에 따른 QA 판단을 구분했습니다.</p>
+          <p>형식, 필수값, 명확한 판정 기준은 정해진 규칙으로 확인할 수 있습니다. 문서의 의미와 요구사항 충족 여부는 제품 맥락을 읽어야 합니다. 단계의 진행과 재검증, 최종 등록 또한 각각 다른 책임으로 다뤄야 한다고 판단했습니다.</p>
+        </div>
+      </section>
+
+      <section class="detail-block" aria-labelledby="strategy-title">
+        <h2 id="strategy-title">QA Strategy</h2>
+        <div>
+          <p>품질검사 전체를 하나의 QA Harness로 묶고, 처리 성격에 따라 역할을 분리했습니다. 자동화 범위를 넓히면서도 QA 판단과 최종 결정의 책임을 명확히 하기 위한 설계입니다.</p>
+          <dl class="harness-roles">
+            <div><dt>Code</dt><dd>형식, 필수값, 명확한 판정 기준처럼 결정 가능한 검증을 처리합니다.</dd></div>
+            <div><dt>Agent</dt><dd>문서 의미와 요구사항 충족 여부처럼 제품 Context가 필요한 판단을 수행합니다.</dd></div>
+            <div><dt>Orchestrator</dt><dd>단계별 결과에 따라 다음 단계 진행과 재검증을 제어합니다.</dd></div>
+            <div><dt>Human</dt><dd>최종 등록처럼 중요하거나 되돌리기 어려운 결정을 수행합니다.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="detail-block detail-block-wide" aria-labelledby="architecture-title">
+        <h2 id="architecture-title">Harness Architecture</h2>
+        <div>
+          <p>요청건을 기준으로 각 단계의 입력과 산출물을 연결했습니다. 앞 단계에서 생성한 결과가 검증을 통과하면 다음 단계의 입력으로 이어지고, 최종 등록은 Human이 담당합니다.</p>
+          <figure class="harness-diagram">
+            <figcaption>품질검사 전체 Workflow</figcaption>
+            <ol class="diagram-steps workflow-steps">
+              <li><span>01</span><strong>제출 문서 검토</strong></li>
+              <li><span>02</span><strong>원본 결과 표시</strong></li>
+              <li><span>03</span><strong>Test Case 작성</strong></li>
+              <li><span>04</span><strong>제품 테스트</strong></li>
+              <li><span>05</span><strong>결과 작성</strong></li>
+              <li><span>06</span><strong>최종 등록</strong><small>Human 결정</small></li>
+            </ol>
+          </figure>
+        </div>
+      </section>
+
+      <section class="detail-block detail-block-wide" aria-labelledby="validation-title">
+        <h2 id="validation-title">Validation</h2>
+        <div>
+          <p>생성된 결과를 그대로 다음 단계에 전달하지 않도록 Generate-Verify 구조를 적용했습니다. 각 단계의 생성 결과를 별도의 검증 역할이 다시 확인하고, Validation Gate를 통과한 경우에만 다음 단계로 진행합니다.</p>
+          <figure class="harness-diagram">
+            <figcaption>단계별 결과 검증 구조</figcaption>
+            <ol class="diagram-steps validation-steps">
+              <li><span>Generate</span><strong>단계 결과 생성</strong></li>
+              <li><span>Verify</span><strong>별도 역할이 재확인</strong></li>
+              <li><span>Gate</span><strong>통과 여부 판단</strong></li>
+              <li><span>Pass</span><strong>다음 단계 진행</strong></li>
+            </ol>
+            <p class="diagram-note"><strong>검증 실패</strong> 다음 단계 진행을 보류하고 Orchestrator가 재검증을 제어합니다.</p>
+          </figure>
+          <p>실제 품질검사 요청에서 잘못 생성된 결과 파일 2건을 Gate에서 확인해 다음 단계로 넘어가기 전에 차단했습니다.</p>
+        </div>
+      </section>
+
+      <section class="detail-block" aria-labelledby="result-title">
+        <h2 id="result-title">Result</h2>
+        <div>
+          <p>39개 제품의 반복 품질검사에 적용할 QA Harness를 설계하고 구축했습니다. 최소 5~7일이 소요되던 전체 품질검사를 약 2~3시간 내 수행 가능한 Workflow로 개선했고, 팀의 실제 품질검사 업무에 활용했습니다.</p>
+          <p>단계별 Validation Gate로 잘못 생성된 결과 파일 2건을 다음 단계 전에 차단했습니다. 반복 업무를 연결하고 검증하는 구조를 마련해 제품 이해, 변경 영향도 분석, 주요 Risk 검증에 집중할 수 있도록 했습니다.</p>
+        </div>
+      </section>
     </div>
     <a class="detail-next" href="../index.html#dream-security">다른 Case 살펴보기 ↗</a>
   </main>

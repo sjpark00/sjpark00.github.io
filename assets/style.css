@@ -106,8 +106,26 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
 .detail-block { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 30px; padding: 38px 0; border-bottom: 1px solid #304057; }
 .detail-block h2 { margin: 0; color: #80e6ce; font-size: .92rem; font-weight: 800; letter-spacing: .02em; }
 .detail-block p, .detail-block ul { margin: 0; color: #d2ddec; word-break: keep-all; }
+.detail-block p + p { margin-top: 14px; }
 .detail-block ul { padding-left: 20px; }
 .detail-block li + li { margin-top: 9px; }
+.detail-block-wide { grid-template-columns: 1fr; gap: 16px; }
+.harness-roles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 22px 0 0; }
+.harness-roles div { padding: 16px 18px; border: 1px solid #304057; border-radius: 8px; background: #142036; }
+.harness-roles dt { color: #80e6ce; font-size: .86rem; font-weight: 800; }
+.harness-roles dd { margin: 6px 0 0; color: #d2ddec; font-size: .88rem; word-break: keep-all; }
+.harness-diagram { margin: 24px 0; padding: 22px; border: 1px solid #304057; border-radius: 10px; background: #111b2c; }
+.harness-diagram figcaption { margin-bottom: 18px; color: #80e6ce; font-size: .85rem; font-weight: 800; }
+.diagram-steps { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.workflow-steps { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.validation-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.diagram-steps li { position: relative; min-width: 0; padding: 14px 12px; border: 1px solid #344761; border-radius: 7px; background: #17243a; }
+.diagram-steps li:not(:last-child)::after { position: absolute; top: 50%; right: -13px; z-index: 1; color: #80e6ce; content: "→"; transform: translateY(-50%); }
+.diagram-steps li span { display: block; color: #80e6ce; font-size: .73rem; font-weight: 800; }
+.diagram-steps li strong { display: block; margin-top: 7px; font-size: .86rem; line-height: 1.45; word-break: keep-all; }
+.diagram-steps li small { display: block; margin-top: 5px; color: #aebdd1; font-size: .73rem; }
+.diagram-note { margin: 18px 0 0; padding-left: 14px; border-left: 2px solid #80e6ce; color: #d2ddec; font-size: .87rem; }
+.diagram-note strong { margin-right: 8px; color: #80e6ce; }
 .detail-next { display: inline-block; margin-top: 42px; color: #80e6ce; font-weight: 700; text-decoration: none; }
 .detail-next:hover { text-decoration: underline; }
 @media (max-width: 900px) {
@@ -122,6 +140,8 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
   .step-number { padding-left: 0; line-height: 27px; }
   .strategy-flow h3 { margin: 5px 0 9px; }
   .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .diagram-steps { grid-template-columns: 1fr; gap: 22px; }
+  .diagram-steps li:not(:last-child)::after { top: auto; right: auto; bottom: -24px; left: 50%; content: "↓"; transform: translateX(-50%); }
 }
 @media (max-width: 640px) {
   .container { width: min(100% - 36px, 1120px); }
@@ -142,6 +162,8 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
   .detail-flow li + li::before { transform: rotate(90deg); }
   .back-link { margin-bottom: 32px; }
   .detail-block { grid-template-columns: 1fr; gap: 10px; padding-block: 28px; }
+  .harness-roles { grid-template-columns: 1fr; }
+  .harness-diagram { padding: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
