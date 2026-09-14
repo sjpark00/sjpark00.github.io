@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="제품 구조와 사용자 영향을 이해하고 Risk에 맞는 QA 전략을 설계하는 QA Engineer sjpark의 포트폴리오">
-  <title>sjpark | QA Engineer</title>
+  <meta name="description" content="제품 구조와 사용자 영향을 이해하고 Risk에 맞는 QA 전략을 설계하는 QA Engineer 박수정의 포트폴리오">
+  <title>박수정 | QA Engineer</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="sjpark 홈">sjpark<span>.</span></a>
+      <a class="brand" href="#top" aria-label="박수정 홈">박수정<span>.</span></a>
       <nav class="site-nav" aria-label="주 메뉴">
         <a href="#about">About</a><a href="#strategy">Strategy</a><a href="#product">Product QA</a>
         <a href="#security">Security QA</a><a href="#skills">Skills</a>
@@ -28,11 +28,11 @@
       </div>
       <aside class="profile-card" aria-label="프로필 및 연락처">
         <p class="eyebrow">Profile</p>
-        <strong>sjpark</strong>
+        <strong>박수정</strong>
         <span>QA Engineer</span>
         <div class="profile-links">
-          <a href="mailto:sujeong.park001@gmail.com">sujeong.park001@gmail.com <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/sjpark00">github.com/sjpark00 <span aria-hidden="true">↗</span></a>
+          <div><span>Email</span><a href="mailto:sujeong.park001@gmail.com">sujeong.park001@gmail.com <span aria-hidden="true">↗</span></a></div>
+          <div><span>GitHub</span><a href="https://github.com/sjpark00">github.com/sjpark00 <span aria-hidden="true">↗</span></a></div>
         </div>
       </aside>
     </section>
@@ -60,18 +60,22 @@
       </div>
       <div class="case-grid">
         <a class="case-card" href="cases/product-reservation.html" aria-label="Case 01: 5개 예약 채널의 거래를 매장 App까지 검증, 자세히 보기">
-          <div class="case-top"><span class="case-index">CASE 01</span></div>
+          <div class="case-top"><span class="case-index">CASE 01</span><span class="case-tag">E2E</span></div>
           <h3>예약 거래 E2E 검증</h3>
-          <p>Backend 전달 누락 Issue 발견</p>
-          <div class="case-evidence"><strong>5개 채널</strong><span>매장 App까지 검증</span></div>
-          <span class="case-link">Case Study 보기 <span aria-hidden="true">↗</span></span>
+          <dl class="case-facts">
+            <div><dt>발견</dt><dd>Backend 전달 누락 Issue</dd></div>
+            <div><dt>검증 범위</dt><dd><strong>5개 채널</strong>에서 매장 App까지</dd></div>
+          </dl>
+          <span class="case-link" aria-hidden="true">↗</span>
         </a>
         <a class="case-card" href="cases/product-release.html" aria-label="Case 02: 제품 특성에 따른 Release와 Regression 전략, 자세히 보기">
-          <div class="case-top"><span class="case-index">CASE 02</span></div>
+          <div class="case-top"><span class="case-index">CASE 02</span><span class="case-tag">Release</span></div>
           <h3>Release / Regression 전략</h3>
-          <p>배포 특성과 영향도를 기준으로 Hotfix 판단</p>
-          <div class="case-evidence"><strong>2주 단위</strong><span>Release</span></div>
-          <span class="case-link">Case Study 보기 <span aria-hidden="true">↗</span></span>
+          <dl class="case-facts">
+            <div><dt>판단 기준</dt><dd>배포 특성 / 영향도</dd></div>
+            <div><dt>Release</dt><dd><strong>2주 단위</strong></dd></div>
+          </dl>
+          <span class="case-link" aria-hidden="true">↗</span>
         </a>
       </div>
     </section>
@@ -85,18 +89,22 @@
         <p class="scope-line">OS / JDK / DB 환경 <span aria-hidden="true">|</span> 설치 및 기능 검증 <span aria-hidden="true">|</span> 산출물 검토 <span aria-hidden="true">|</span> 소스코드 / 오픈소스 취약점 점검</p>
         <div class="case-grid">
           <a class="case-card" href="cases/security-api.html" aria-label="Case 01: 약 4,000개 API 조합을 5일에서 20분으로, 자세히 보기">
-            <div class="case-top"><span class="case-index">CASE 01</span></div>
+            <div class="case-top"><span class="case-index">CASE 01</span><span class="case-tag">API Automation</span></div>
             <h3>API 검증 자동화</h3>
-            <p>약 4,000 Cases를 4개 검사 회차에 재사용</p>
-            <div class="case-evidence"><strong>약 5일 → 약 20분</strong></div>
-            <span class="case-link">Case Study 보기 <span aria-hidden="true">↗</span></span>
+            <dl class="case-facts">
+              <div><dt>검증 규모</dt><dd>약 4,000 Cases / 4개 검사 회차</dd></div>
+              <div><dt>소요 시간</dt><dd><strong>약 5일 → 약 20분</strong></dd></div>
+            </dl>
+            <span class="case-link" aria-hidden="true">↗</span>
           </a>
           <a class="case-card" href="cases/security-harness.html" aria-label="Case 02: 39개 제품의 반복 품질검사를 위한 QA Harness 구축, 자세히 보기">
-            <div class="case-top"><span class="case-index">CASE 02</span></div>
+            <div class="case-top"><span class="case-index">CASE 02</span><span class="case-tag">QA Process</span></div>
             <h3>QA Harness 구축</h3>
-            <p>39개 제품의 품질검사 Workflow</p>
-            <div class="case-evidence"><strong>2건 차단</strong><span>Validation Gate</span></div>
-            <span class="case-link">Case Study 보기 <span aria-hidden="true">↗</span></span>
+            <dl class="case-facts">
+              <div><dt>적용 범위</dt><dd>39개 제품</dd></div>
+              <div><dt>검증 결과</dt><dd><strong>잘못 생성된 결과물 2건 차단</strong></dd></div>
+            </dl>
+            <span class="case-link" aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
@@ -113,6 +121,6 @@
     </section>
 
   </main>
-  <footer class="site-footer"><div class="container"><span>© sjpark</span><span>QA Engineer Portfolio</span></div></footer>
+  <footer class="site-footer"><div class="container"><span>© 박수정</span><span>QA Engineer Portfolio</span></div></footer>
 </body>
 </html>

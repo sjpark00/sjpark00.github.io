@@ -30,7 +30,9 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
 .profile-card > strong { display: block; font-size: 1.55rem; letter-spacing: -.05em; }
 .profile-card > span { display: block; margin-top: 2px; color: #aebdd1; font-size: .9rem; }
 .profile-links { display: grid; gap: 12px; margin-top: 28px; }
-.profile-links a { display: flex; justify-content: space-between; gap: 6px; padding-top: 12px; border-top: 1px solid #304057; font-size: .8rem; overflow-wrap: anywhere; text-decoration: none; }
+.profile-links > div { padding-top: 12px; border-top: 1px solid #304057; }
+.profile-links > div > span { display: block; color: #80e6ce; font-size: .7rem; font-weight: 700; }
+.profile-links a { display: flex; justify-content: space-between; gap: 6px; margin-top: 3px; font-size: .8rem; overflow-wrap: anywhere; text-decoration: none; }
 .profile-links a span { flex: none; }
 .section { padding-block: clamp(76px, 9vw, 122px); scroll-margin-top: 24px; }
 .section-tint { border-block: 1px solid #1f2c40; background: #111b2c; }
@@ -53,12 +55,14 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
 .case-card:hover { border-color: #80e6ce; transform: translateY(-3px); }
 .case-top { display: flex; justify-content: space-between; gap: 16px; font-size: .75rem; font-weight: 800; letter-spacing: .08em; }
 .case-index { color: #80e6ce; }
+.case-tag { padding: 3px 8px; border: 1px solid #3a5263; border-radius: 4px; color: #b4c7d7; font-size: .68rem; letter-spacing: 0; }
 .case-card h3 { margin: 22px 0 12px; font-size: clamp(1.35rem, 2vw, 1.8rem); line-height: 1.35; letter-spacing: -.045em; word-break: keep-all; }
-.case-card > p { margin: 0; color: #aebdd1; font-size: .94rem; word-break: keep-all; }
-.case-evidence { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 14px; margin-top: auto; padding-top: 25px; }
-.case-evidence strong { color: #80e6ce; font-size: 1.13rem; letter-spacing: -.035em; }
-.case-evidence span { color: #aebdd1; font-size: .82rem; }
-.case-link { display: flex; justify-content: space-between; margin-top: 20px; padding-top: 16px; border-top: 1px solid #304057; font-size: .84rem; font-weight: 700; }
+.case-facts { display: grid; gap: 11px; margin: 8px 0 0; }
+.case-facts div { display: grid; grid-template-columns: 75px minmax(0, 1fr); gap: 10px; }
+.case-facts dt { color: #91a7bd; font-size: .74rem; font-weight: 700; }
+.case-facts dd { margin: 0; color: #c7d5e5; font-size: .84rem; word-break: keep-all; }
+.case-facts strong { color: #80e6ce; }
+.case-link { display: block; margin-top: auto; padding-top: 14px; border-top: 1px solid #304057; color: #80e6ce; font-size: 1.2rem; text-align: right; }
 .skills-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .skill-group { padding: 22px 0; border-top: 2px solid #80e6ce; }
 .skill-group h3 { margin: 0 0 12px; font-size: 1rem; }
