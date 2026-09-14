@@ -1,0 +1,13 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local editor files
+.idea/
+*.swp
+*.swo
+
+# Local secrets
+.env
+.env.*
+!.env.example
