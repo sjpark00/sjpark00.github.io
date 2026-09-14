@@ -21,6 +21,7 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
 .site-nav a { color: #aebdd1; font-size: .82rem; font-weight: 600; white-space: nowrap; text-decoration: none; }
 .site-nav a:hover, .profile-links a:hover { color: #80e6ce; }
 .eyebrow { margin: 0 0 18px; color: #80e6ce; font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow span { display: inline-block; margin-right: 10px; padding: 3px 7px; border: 1px solid #3a726e; border-radius: 4px; letter-spacing: 0; }
 .hero { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(270px, .65fr); align-items: center; gap: clamp(32px, 6vw, 80px); padding-block: clamp(80px, 10vw, 126px); }
 .hero h1 { margin: 0; max-width: 830px; font-size: clamp(2.55rem, 5.2vw, 4.65rem); line-height: 1.17; letter-spacing: -.065em; word-break: keep-all; }
 .hero h1 span { color: #80e6ce; }
@@ -43,13 +44,15 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
 .section-context { text-align: right; }
 .section-context span { color: #80e6ce; font-size: .84rem; font-weight: 700; }
 .section-context p { margin: 4px 0 0; color: #aebdd1; font-size: .92rem; }
+.section-context small { display: inline-block; margin-left: 6px; padding: 1px 7px; border: 1px solid #3a5263; border-radius: 4px; color: #80e6ce; font-size: .72rem; }
 .strategy-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
-.strategy-grid li { min-height: 190px; padding: 22px 18px; border: 1px solid #304057; border-radius: 10px; background: #152137; }
+.strategy-grid > li { min-height: 190px; padding: 22px 18px; border: 1px solid #304057; border-radius: 10px; background: #152137; }
 .step-number { color: #80e6ce; font-size: .78rem; font-weight: 800; }
 .strategy-grid h3 { margin: 28px 0 10px; font-size: 1.05rem; letter-spacing: -.03em; }
-.strategy-grid p { margin: 0; color: #acbbce; font-size: .86rem; word-break: keep-all; }
-.scope-line { margin: -10px 0 30px; color: #aebdd1; font-size: .9rem; }
-.scope-line span { margin-inline: 9px; color: #52627a; }
+.term-list, .scope-list, .skill-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.term-list li, .scope-list li, .skill-list li { padding: 3px 7px; border: 1px solid #344761; border-radius: 4px; color: #b8c9da; font-size: .77rem; line-height: 1.4; }
+.scope-list { margin: -10px 0 30px; gap: 8px; }
+.scope-list li { padding: 6px 10px; font-size: .82rem; }
 .case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .case-card { display: flex; flex-direction: column; min-height: 300px; padding: clamp(24px, 3vw, 36px); border: 1px solid #304057; border-radius: 12px; background: #142036; text-decoration: none; transition: border-color .15s ease, transform .15s ease; }
 .case-card:hover { border-color: #80e6ce; transform: translateY(-3px); }
@@ -66,7 +69,6 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
 .skills-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .skill-group { padding: 22px 0; border-top: 2px solid #80e6ce; }
 .skill-group h3 { margin: 0 0 12px; font-size: 1rem; }
-.skill-group p { margin: 0; color: #aebdd1; font-size: .9rem; }
 .site-footer { padding-block: 24px; border-top: 1px solid #233149; color: #8295af; font-size: .82rem; }
 .site-footer .container { display: flex; justify-content: space-between; gap: 16px; }
 .detail-main { padding-block: 62px 112px; }
@@ -101,10 +103,9 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
   .split-heading { align-items: flex-start; flex-direction: column; }
   .section-context { text-align: left; }
   .strategy-grid, .case-grid { grid-template-columns: 1fr; }
-  .strategy-grid li { min-height: 0; padding: 20px; }
+  .strategy-grid > li { min-height: 0; padding: 20px; }
   .strategy-grid h3 { margin-top: 12px; }
   .case-card { min-height: 270px; }
-  .scope-line span { margin-inline: 4px; }
   .detail-main { padding-block: 42px 80px; }
   .back-link { margin-bottom: 32px; }
   .detail-block { grid-template-columns: 1fr; gap: 10px; padding-block: 28px; }
