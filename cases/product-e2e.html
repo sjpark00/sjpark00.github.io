@@ -3,39 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="5개 예약 채널의 거래를 매장 App까지 검증 사례">
-  <title>5개 예약 채널의 거래를 매장 App까지 검증 | 박수정 QA Portfolio</title>
+  <meta name="description" content="5개 예약 채널에서 생성된 거래를 백엔드와 매장 앱까지 검증한 사례">
+  <title>예약 거래 E2E 검증 | 박수정 QA 포트폴리오</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="../index.html" aria-label="박수정 홈">박수정<span>.</span></a>
-    <nav class="site-nav" aria-label="주 메뉴"><a href="../index.html#about">About</a><a href="../index.html#strategy">Strategy</a><a href="../index.html#experience">Experience</a><a href="../index.html#skills">Skills</a><a href="../index.html#education">Education</a></nav>
+    <nav class="site-nav" aria-label="주 메뉴"><a href="../index.html#about">소개</a><a href="../index.html#strategy">전략</a><a href="../index.html#experience">경력</a><a href="../index.html#skills">기술</a><a href="../index.html#education">자격 및 학력</a></nav>
   </div></header>
   <main class="container detail-main" id="main">
-    <a class="back-link" href="../index.html#poing">← Experience로 돌아가기</a>
+    <a class="back-link" href="../index.html#poing">← 경력으로 돌아가기</a>
     <header class="detail-header">
-      <p class="eyebrow">Case Study</p>
+      <p class="eyebrow">대표 사례</p>
       <h1>예약 거래 E2E 검증</h1>
       <div class="detail-meta"><span>POING CORPORATION</span><span>QA Senior</span><span>2022.08 - 2024.09</span></div>
-      <p>예약 채널의 성공 결과가 매장 App까지 이어지는지 E2E로 검증한 사례입니다.</p>
+      <p>5개 예약 채널의 거래가 백엔드를 거쳐 매장 앱에 반영되는지 검증했습니다.</p>
     </header>
     <dl class="detail-highlights">
       <div><dt>예약 채널</dt><dd>5개</dd></div>
-      <div><dt>검증 범위</dt><dd>E2E Data Flow</dd></div>
+      <div><dt>검증 범위</dt><dd>E2E 데이터 흐름</dd></div>
     </dl>
-    <ol class="detail-flow" aria-label="예약 Data Flow"><li>5개 예약 채널</li><li>Backend</li><li>매장 App</li></ol>
+    <ol class="detail-flow" aria-label="예약 데이터 흐름"><li>5개 예약 채널</li><li>백엔드</li><li>매장 앱</li></ol>
     <div class="detail-content">
-    <section class="detail-block" aria-labelledby="block-1"><h2 id="block-1">Background</h2><p>Native 기반 B2C 예약 App과 Hybrid 기반 B2B 매장 App을 대상으로, 5개 예약 채널에서 생성된 거래가 Backend를 거쳐 매장 App에 반영되는 흐름을 검증했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-2"><h2 id="block-2">Problem</h2><p>외부 예약 채널에서는 예약이 성공했지만 Backend 전달이 누락되어 매장 App에 반영되지 않는 Issue가 있었습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-3"><h2 id="block-3">Analysis</h2><p>예약 채널의 성공 결과와 매장 App의 반영 결과를 연결해 확인해야 하는 거래 흐름으로 보았습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-4"><h2 id="block-4">QA Strategy</h2><p>5개 예약 채널 각각에서 예약 생성부터 Backend, 매장 App까지 이어지는 E2E 검증 범위를 설정했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-5"><h2 id="block-5">Action</h2><p>예약 생성 → Backend 전달 → 매장 App 반영 순서로 거래 흐름을 검증했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-6"><h2 id="block-6">Result</h2><p>외부 채널에서는 성공했지만 Backend 전달이 누락되어 매장 App에 반영되지 않는 Issue를 발견했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-1"><h2 id="block-1">배경</h2><p>B2C 고객 앱은 네이티브, B2B 매장 앱은 하이브리드 방식입니다. 5개 예약 채널의 거래가 백엔드를 거쳐 매장 앱에 반영되는 흐름을 검증했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-2"><h2 id="block-2">문제</h2><p>외부 채널에서는 예약이 성공했지만, 백엔드 전달이 누락돼 매장 앱에 반영되지 않았습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-3"><h2 id="block-3">분석</h2><p>채널의 예약 성공 여부와 매장 앱의 반영 여부를 함께 확인해야 했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-4"><h2 id="block-4">QA 전략</h2><p>5개 채널 각각에서 예약 생성부터 매장 앱 반영까지 E2E 검증 범위를 정했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-5"><h2 id="block-5">실행</h2><p>예약 생성, 백엔드 전달, 매장 앱 반영을 순서대로 확인했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-6"><h2 id="block-6">결과</h2><p>외부 채널에서는 예약이 성공했지만 백엔드 전달이 누락되는 이슈를 발견했습니다.</p></section>
     </div>
-    <a class="detail-next" href="../index.html#poing">다른 Case 살펴보기 ↗</a>
+    <a class="detail-next" href="../index.html#poing">다른 사례 보기 ↗</a>
   </main>
-  <footer class="site-footer"><div class="container"><span>© 박수정</span><span>QA Engineer Portfolio</span></div></footer>
+  <footer class="site-footer"><div class="container"><span>© 박수정</span><span>QA 포트폴리오</span></div></footer>
 </body>
 </html>

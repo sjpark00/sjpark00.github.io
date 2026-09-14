@@ -3,40 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="제품 특성에 따른 Release와 Regression 전략 사례">
-  <title>제품 특성에 따른 Release와 Regression 전략 | 박수정 QA Portfolio</title>
+  <meta name="description" content="배포 방식과 사용자 영향을 기준으로 긴급 수정 여부를 판단하고 운영 이슈를 회귀 검증에 반영한 사례">
+  <title>배포와 회귀 검증 전략 | 박수정 QA 포트폴리오</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="../index.html" aria-label="박수정 홈">박수정<span>.</span></a>
-    <nav class="site-nav" aria-label="주 메뉴"><a href="../index.html#about">About</a><a href="../index.html#strategy">Strategy</a><a href="../index.html#experience">Experience</a><a href="../index.html#skills">Skills</a><a href="../index.html#education">Education</a></nav>
+    <nav class="site-nav" aria-label="주 메뉴"><a href="../index.html#about">소개</a><a href="../index.html#strategy">전략</a><a href="../index.html#experience">경력</a><a href="../index.html#skills">기술</a><a href="../index.html#education">자격 및 학력</a></nav>
   </div></header>
   <main class="container detail-main" id="main">
-    <a class="back-link" href="../index.html#poing">← Experience로 돌아가기</a>
+    <a class="back-link" href="../index.html#poing">← 경력으로 돌아가기</a>
     <header class="detail-header">
-      <p class="eyebrow">Case Study</p>
-      <h1>Release와 Regression 전략</h1>
+      <p class="eyebrow">대표 사례</p>
+      <h1>배포와 회귀 검증 전략</h1>
       <div class="detail-meta"><span>POING CORPORATION</span><span>QA Senior</span><span>2022.08 - 2024.09</span></div>
-      <p>배포 특성과 영향도를 기준으로 Release, Hotfix, Regression 범위를 판단한 사례입니다.</p>
+      <p>사용자 및 비즈니스 영향, 우회 가능 여부, 배포 제약으로 긴급 수정 여부를 판단했습니다.</p>
     </header>
     <dl class="detail-highlights">
-      <div><dt>Release 주기</dt><dd>2주</dd></div>
-      <div><dt>B2C 고객 App</dt><dd>Native</dd></div>
-      <div><dt>B2B 매장 App</dt><dd>Hybrid</dd></div>
+      <div><dt>정기 배포 주기</dt><dd>2주</dd></div>
+      <div><dt>B2C 고객 앱</dt><dd>네이티브</dd></div>
+      <div><dt>B2B 매장 앱</dt><dd>하이브리드</dd></div>
     </dl>
-    <ol class="detail-flow" aria-label="Release 판단 흐름"><li>영향과 우회 가능 여부 검토</li><li>배포 제약 확인</li><li>Hotfix 또는 Next Release 판단</li><li>Regression 반영</li></ol>
+    <ol class="detail-flow" aria-label="배포 판단 흐름"><li>영향과 우회 가능 여부 검토</li><li>배포 제약 확인</li><li>긴급 수정 또는 다음 정기 배포 판단</li><li>회귀 검증 반영</li></ol>
     <div class="detail-content">
-    <section class="detail-block" aria-labelledby="block-1"><h2 id="block-1">Background</h2><p>B2C 예약 App은 Native, B2B 매장 App은 Hybrid 방식으로 운영되며, 2주 단위 Release에서 각 배포 특성을 고려해야 했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-2"><h2 id="block-2">Problem</h2><p>Release와 Hotfix를 판단할 때 사용자와 비즈니스 영향뿐 아니라 우회 가능 여부와 배포 제약을 함께 고려해야 했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-3"><h2 id="block-3">Analysis</h2><p>B2C Native와 B2B Hybrid의 배포 특성, 사용자 영향, 비즈니스 영향, 우회 가능 여부, 배포 제약을 판단 기준으로 정리했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-4"><h2 id="block-4">QA Strategy</h2><p>사용자 및 비즈니스 영향, 우회 가능 여부, 배포 제약을 기준으로 Hotfix 또는 Next Release를 판단하고, Production Issue와 반복 Issue를 Regression에 반영했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-5"><h2 id="block-5">Action</h2><p>2주 단위 Release에 맞춰 배포 특성을 고려하고, Production Issue와 반복 Issue를 Regression 범위에 반영했습니다.</p></section>
-    <section class="detail-block" aria-labelledby="block-6"><h2 id="block-6">Result</h2><p>Hotfix 판단 기준과 Production Issue 및 반복 Issue를 반영한 Regression 전략을 적용했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-1"><h2 id="block-1">배경</h2><p>B2C 고객 앱은 네이티브, B2B 매장 앱은 하이브리드 방식으로 배포됐습니다. 정기 배포 주기는 2주였습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-2"><h2 id="block-2">문제</h2><p>운영 이슈가 발생하면 긴급 수정 여부를 판단해야 했습니다. 사용자 및 비즈니스 영향, 우회 가능 여부, 배포 제약을 함께 고려했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-3"><h2 id="block-3">분석</h2><p>두 앱의 배포 방식과 사용자 영향을 기준으로 판단 항목을 정리했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-4"><h2 id="block-4">QA 전략</h2><p>영향과 우회 가능 여부, 배포 제약을 검토해 긴급 수정 또는 다음 정기 배포를 판단했습니다. 운영 및 반복 이슈를 회귀 검증에 반영했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-5"><h2 id="block-5">실행</h2><p>2주 단위 정기 배포에서 제품별 배포 특성을 확인했습니다. 운영 및 반복 이슈를 회귀 검증 범위에 포함했습니다.</p></section>
+    <section class="detail-block" aria-labelledby="block-6"><h2 id="block-6">결과</h2><p>긴급 수정 판단 기준을 적용하고, 운영 및 반복 이슈를 회귀 검증에 반영했습니다.</p></section>
     </div>
-    <a class="detail-next" href="../index.html#poing">다른 Case 살펴보기 ↗</a>
+    <a class="detail-next" href="../index.html#poing">다른 사례 보기 ↗</a>
   </main>
-  <footer class="site-footer"><div class="container"><span>© 박수정</span><span>QA Engineer Portfolio</span></div></footer>
+  <footer class="site-footer"><div class="container"><span>© 박수정</span><span>QA 포트폴리오</span></div></footer>
 </body>
 </html>
