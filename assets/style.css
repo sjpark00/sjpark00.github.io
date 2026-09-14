@@ -36,11 +36,6 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
 .profile-links > div > span { display: block; color: #80e6ce; font-size: .7rem; font-weight: 700; }
 .profile-links a { display: flex; justify-content: space-between; gap: 6px; margin-top: 3px; font-size: .8rem; overflow-wrap: anywhere; text-decoration: none; }
 .profile-links a span { flex: none; }
-.metric-list { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 10px 0 0; padding: 22px 0 0; border-top: 1px solid #304057; list-style: none; }
-.metric-list li { padding: 8px 22px; border-left: 1px solid #304057; }
-.metric-list li:first-child { padding-left: 0; border-left: 0; }
-.metric-list strong { display: block; color: #80e6ce; font-size: clamp(1.6rem, 2.5vw, 2.15rem); line-height: 1.1; letter-spacing: -.05em; }
-.metric-list span { display: block; margin-top: 8px; color: #aebdd1; font-size: .77rem; font-weight: 600; }
 .section { padding-block: clamp(76px, 9vw, 122px); scroll-margin-top: 24px; }
 .section-tint { border-block: 1px solid #1f2c40; background: #111b2c; }
 .section-heading { margin-bottom: 36px; }
@@ -133,8 +128,6 @@ a:focus-visible { outline: 2px solid #80e6ce; outline-offset: 4px; }
   .site-nav { display: grid; grid-template-columns: repeat(3, max-content); gap: 8px 18px; overflow-x: visible; }
   .hero { gap: 42px; padding-block: 68px 82px; }
   .hero h1 { font-size: clamp(1.75rem, 6.2vw, 2rem); }
-  .metric-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 0; }
-  .metric-list li:nth-child(odd) { padding-left: 0; border-left: 0; }
   .section { padding-block: 70px; }
   .case-grid, .credentials-grid { grid-template-columns: 1fr; }
   .experience-header { flex-direction: column; gap: 4px; }
